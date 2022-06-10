@@ -1,0 +1,39 @@
+﻿@model List<Choose>
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+    int order = 0;
+}
+
+<table class="table table-striped table-dark">
+    <tr><a asp-action="Create" >Create</a></tr>
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Icon</th>
+            <th scope="col">Title</th>
+            <th scope="col">Sub Title</th>
+            <th scope="col">Status </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@order</th>
+                <td>@item.Icon</td>
+                <td>@item.Title</td>
+                <td>@item.SubTitle</td>
+                <td>@item.IsDeleted</td>
+                <td class="text-warning" ><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></td>
+                <td class="text-danger"><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></td>
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+
+

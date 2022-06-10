@@ -1,0 +1,66 @@
+body{
+    background-image: url(https://preview.uideck.com/items/saaspal/assets/img/hero/hero-bg.svg);
+    background-repeat: no-repeat;
+}
+.btn-get{
+    width: 40%;
+    height: 10%;
+    border:  2px solid white;
+    background-color: transparent;
+    
+}
+.btn-get:hover{
+    background-color: rgb(173, 173, 173) ;
+    transition: 0.5s;
+    
+}
+.main-color{
+    color: #5864ff;
+}
+.down{
+    width: 5%;
+    height: 5%;
+}
+.fs-60{
+    font-size: 60px;
+}
+.fs-40{
+    font-size: 40px;
+}
+.icons{
+    width: 140px; 
+    height: 140px;
+    background: rgba(88,100,255,.1);
+}
+.fixed{
+    display: flex;
+    justify-content: right;
+    width: 3%;
+    height: 5%;
+    
+    background-color:#5864ff ;
+
+}
+.circle{
+    background-image: url(https://preview.uideck.com/items/saaspal/assets/img/about/about-left-shape.svg);
+    background-repeat: no-repeat;
+}
+.ms-14{
+    margin-left: 14rem !important;
+}
+.btn-discover{
+     width: 30%;
+     height: 10%;
+     border:  2px solid  #5864ff;
+
+}
+.pt-450{
+    padding-top: 450px;
+}
+.bi-arrow-left-circle:hover{
+    color: #5864ff;
+}
+.hov:hover{
+    margin-left: 1rem !important;
+    transition: 0.5s;
+}
