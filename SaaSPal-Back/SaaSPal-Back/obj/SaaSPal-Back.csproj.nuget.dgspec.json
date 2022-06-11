@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tu7ekdm78\\Desktop\\SaaSPal-Back\\SaaSPal-Back\\SaaSPal-Back.csproj": {}
+    "C:\\Users\\admin\\OneDrive\\İş masası\\SaaSPal\\SaaSPal-Back\\SaaSPal-Back\\SaaSPal-Back.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tu7ekdm78\\Desktop\\SaaSPal-Back\\SaaSPal-Back\\SaaSPal-Back.csproj": {
+    "C:\\Users\\admin\\OneDrive\\İş masası\\SaaSPal\\SaaSPal-Back\\SaaSPal-Back\\SaaSPal-Back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tu7ekdm78\\Desktop\\SaaSPal-Back\\SaaSPal-Back\\SaaSPal-Back.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\OneDrive\\İş masası\\SaaSPal\\SaaSPal-Back\\SaaSPal-Back\\SaaSPal-Back.csproj",
         "projectName": "SaaSPal-Back",
-        "projectPath": "C:\\Users\\tu7ekdm78\\Desktop\\SaaSPal-Back\\SaaSPal-Back\\SaaSPal-Back.csproj",
-        "packagesPath": "C:\\Users\\tu7ekdm78\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tu7ekdm78\\Desktop\\SaaSPal-Back\\SaaSPal-Back\\obj\\",
+        "projectPath": "C:\\Users\\admin\\OneDrive\\İş masası\\SaaSPal\\SaaSPal-Back\\SaaSPal-Back\\SaaSPal-Back.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\OneDrive\\İş masası\\SaaSPal\\SaaSPal-Back\\SaaSPal-Back\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tu7ekdm78\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

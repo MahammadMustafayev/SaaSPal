@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SaaSPal_Back.DAL;
 using SaaSPal_Back.Models;
 using System;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 namespace SaaSPal_Back.Areas.Object.Controllers
 {
     [Area("Object")]
+    [Authorize]
     public class ChooseController : Controller
     {
         private AppDbContext _context { get;  }

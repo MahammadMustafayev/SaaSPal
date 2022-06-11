@@ -1,4 +1,5 @@
-﻿@{
+﻿@model HomeVM
+@{
     ViewData["Title"] = "Home Page";
     Layout = null;
 }
@@ -17,18 +18,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
 </head>
 
 <body>
     <div class="container">
+        @*Header*@
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom ">
             <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <img src="https://preview.uideck.com/items/saaspal/assets/img/logo/logo.svg" class="text-white" alt="">
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a asp-area="Object" asp-controller="Choose" asp-action="Index" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link text-white">Features</a></li>
                 <li class="nav-item"><a href="#" class="nav-link text-white">About</a></li>
                 <li class="nav-item"><a href="#" class="nav-link text-white">Why</a></li>
@@ -161,31 +163,31 @@
                 elitr
             </p>
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                @foreach (var item in Model.Choose)
-	            {
-                <div class="feature col">
-                    <i class="bi bi-tv main-color fs-60"></i>
-                    <h2>SaaS Focused</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore
-                    </p>
+                @foreach (var item in Model.Chooses)
+                {
+                    <div class="feature col">
+                        <i class="@item.Icon main-color fs-60"></i>
+                        <h2>@item.Title</h2>
+                        <p>
+                            @item.SubTitle
+                        </p>
 
-                </div>
-	            }
-                
-                
+                    </div>
+                }
+
+
             </div>
 
         </div>
     </section>
     <div class="container">
-        <section class="w-100 vh-100 pt-lg-5 d-flex flex-row">
+
+        <!-- <section class="w-100 vh-100 pt-lg-5 d-flex flex-row">
             <div class="w-50 h-75 circle">
-                <!-- <img class="ms-14 pt-5"
-                    src="https://preview.uideck.com/items/saaspal/assets/img/testimonial/testimonial-1.png" alt=""> -->
+                <img class="ms-14 pt-5"
+                    src="https://preview.uideck.com/items/saaspal/assets/img/testimonial/testimonial-1.png" alt="">
                 <img class="ms-14 pt-5" src="https://preview.uideck.com/items/saaspal/assets/img/about/left-dots.svg"
-                     alt="">
+                    alt="">
             </div>
             <div class="quote  me-5 rounded-pill bg-warning " style="width: 7%; height: 7%; ">
                 <i class="bi bi-quote fs-40 text-white "></i>
@@ -193,17 +195,14 @@
             <div class="ms-3 pt-5">
                 <h2 class="me-4">What our customers says</h2>
 
-                <p class="pt-3 ms-5 fs-5">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod
+                <p class="pt-3 ms-5 fs-5">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod
                     tempor
                     invidunt ut
                     labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.
-                </p>
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.</p>
                 <div class="pt-5 ms-5">
                     <p class="fs-4" style="font-family: Arial, Helvetica, sans-serif;">
-                        Jonathon Smith
-                    </p>
+                        Jonathon Smith</p>
                     <span class="fs-4 text-secondary">Developer and Youtuber</span>
                 </div>
                 <div class="ms-14 pt-4 ">
@@ -215,7 +214,42 @@
 
             </div>
 
-        </section>
+        </section> -->
+        @*Slider*@
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                         class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.pinimg.com/originals/a9/26/52/a926525d966c9479c18d3b4f8e64b434.jpg"
+                         class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://preview.uideck.com/items/saaspal/assets/img/hero/hero-img.png"
+                         class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
             <div class="col mb-3">
                 <a href="#" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
@@ -262,7 +296,9 @@
                     Other Products
                 </h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2 hov"><a href="#" class="nav-link p-0 text-muted">Accounting Software</a></li>
+                    <li class="nav-item mb-2 hov">
+                        <a href="#" class="nav-link p-0 text-muted">Accounting Software</a>
+                    </li>
                     <li class="nav-item mb-2 hov"><a href="#" class="nav-link p-0 text-muted">Billing Software</a></li>
                     <li class="nav-item mb-2 hov"><a href="#" class="nav-link p-0 text-muted">Booking System</a></li>
                     <li class="nav-item mb-2 hov"><a href="#" class="nav-link p-0 text-muted">Tracking System</a></li>
@@ -281,7 +317,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
             integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
             crossorigin="anonymous"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="~/assets/js/main.js"></script>
 </body>
 
 </html>
